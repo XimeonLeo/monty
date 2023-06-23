@@ -43,3 +43,61 @@ void _pint(stack_t **head, unsigned int counter)
 	}
 	printf("%d\n", (*head)->n);
 }
+
+/**
+ * _pop - prints the element at the too of th list
+ *
+ * @head: pointwr to the head of the stack
+ * @counter: line_number
+ *
+ * Return: void
+ */
+void _pop(stack_t **head, unsigned int counter)
+{
+	stack_t *tmp;
+
+	if (*head == NULL)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", counter);
+		fclose(info.file);
+		free(info.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	tmp = *head;
+	*head = tmp->next;
+	free(tmp);
+}
+
+/**
+ * _swap - swaps the top to element of the stack
+ *
+ * @head: pointer to the head of the stack
+ * @counter: line_number
+ *
+ * Return: void
+ */
+void _swap(stack_t **head, unsigned int counter)
+{
+	stack_t *tmp;
+	int len = 0, elem;
+
+	tmp = *head;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		len++;
+	}
+	if (len < 2)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
+		fclose(info.file);
+		free(info.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	tmp = *head;
+	elem = tmp->n;
+	tmp->n = tmp->next->n;
+	tmp->next->n = elem;
+}

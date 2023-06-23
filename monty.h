@@ -64,6 +64,9 @@ void _queue(stack_t **head, unsigned int counter);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void _pall(stack_t **head, unsigned int counter);
 void _pint(stack_t **head, unsigned int counter);
-
+void _pop(stack_t **head, unsigned int counter);
+void _swap(stack_t **head, unsigned int counter);
+void _add(stack_t **head, unsigned int counter);
+void _nop(stack_t **head, unsigned int counter);
 
 #endif /* MONTY_H */
