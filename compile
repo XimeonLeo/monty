@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#read -e -p "input monty file: " file
+#if [ ! -f "$file" ]; then
+#	echo "File '$file' does not exist."
+#	exit 1
+#fi
+gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
