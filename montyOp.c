@@ -99,3 +99,16 @@ void newQueue(stack_t **head, int n)
 	}
 }
 
+/**
+ *_nop - nothing serious, does nothing
+ *
+ *@head: pointer to the head of the stack
+ *@lineNumber: currwnt line being read
+ *
+ *Return: void
+ */
+void _nop(stack_t **head, unsigned int lineNumber)
+{
+	(void) lineNumber;
+	(void) head;
+}
