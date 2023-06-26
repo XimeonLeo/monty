@@ -60,9 +60,11 @@ typedef struct montyFiledetails
 } mnt_f;
 extern mnt_f mnty;
 
+/* Power house */
 int runMonty(char *line, stack_t **stack, unsigned int lineNumber, FILE *file);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void freeStack(stack_t *head);
+void _stack(stack_t **head, unsigned int lineNumber);
 void _queue(stack_t **head, unsigned int lineNumber);
 void newNode(stack_t **head, int n);
 void newQueue(stack_t **head, int n);
@@ -85,5 +87,9 @@ void _mod(stack_t **head, unsigned int lineNumber);
 /* Functions that has to do with characters */
 void _pchar(stack_t **head, unsigned int lineNumber);
 void _pstr(stack_t **head, unsigned int lineNumber);
+
+/* Advanced functions*/
+void _rotl(stack_t **head,  __attribute__((unused)) unsigned int lineNumber);
+void _rotr(stack_t **head, __attribute__((unused)) unsigned int lineNumber);
 
 #endif

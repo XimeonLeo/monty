@@ -48,21 +48,6 @@ void newNode(stack_t **head, int n)
 }
 
 /**
- * _queue - prints the top of the queue
- *
- * @head: pointer to the head of the queue
- * @lineNumber: current line number
- *
- * Return: void
- */
-void _queue(stack_t **head, unsigned int lineNumber)
-{
-	(void)head;
-	(void)lineNumber;
-	mnty.flag = 1;
-}
-
-/**
  * newQueue - add a new element to the end of the queue
  *
  * @n: element contained in the new node
