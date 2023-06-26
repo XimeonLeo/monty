@@ -24,6 +24,8 @@ int runMonty(char *line, stack_t **stack, unsigned int lineNumber, FILE *file)
 				{"div", _div},
 				{"mul", _mul},
 				{"mod", _mod},
+				{"pchar", _pchar},
+				{"pstr", _pstr},
 				{NULL, NULL}
 				};
 	size_t i = 0;

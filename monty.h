@@ -63,20 +63,27 @@ extern mnt_f mnty;
 int runMonty(char *line, stack_t **stack, unsigned int lineNumber, FILE *file);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 void freeStack(stack_t *head);
-void _push(stack_t **head, unsigned int lineNumber);
-void _pall(stack_t **head, unsigned int lineNumber);
 void _queue(stack_t **head, unsigned int lineNumber);
 void newNode(stack_t **head, int n);
 void newQueue(stack_t **head, int n);
+
+/* Basic functions**/
+void _push(stack_t **head, unsigned int lineNumber);
+void _pall(stack_t **head, unsigned int lineNumber);
 void _pint(stack_t **head, unsigned int lineNumber);
 void _pop(stack_t **head, unsigned int lineNumber);
 void _swap(stack_t **head, unsigned int lineNumber);
-void _add(stack_t **head, unsigned int lineNumber);
 void _nop(stack_t **head, unsigned int lineNumber);
+
+/* Functions that has to do with operations */
+void _add(stack_t **head, unsigned int lineNumber);
 void _sub(stack_t **head, unsigned int lineNumber);
 void _div(stack_t **head, unsigned int lineNumber);
 void _mul(stack_t **head, unsigned int lineNumber);
 void _mod(stack_t **head, unsigned int lineNumber);
 
+/* Functions that has to do with characters */
+void _pchar(stack_t **head, unsigned int lineNumber);
+void _pstr(stack_t **head, unsigned int lineNumber);
 
 #endif
